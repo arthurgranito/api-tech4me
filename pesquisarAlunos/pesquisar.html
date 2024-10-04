@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pesquisar Alunos | Tech4me</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <style>
+        .input{
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        input{
+            margin-top: 10px;
+            height: 40px;
+            padding: 10px;
+            width: 100%;
+            font-size: 1rem;
+            border-radius: 10px;
+            outline: none;
+            border: 1px solid black;
+        }
+
+        .pesquisar{
+            color: black;
+            font-size: 1.2rem;
+            height: 40px;
+            width: 50px;
+            border-radius: 50%;
+            background-color: transparent;
+            border: 1px solid transparent;
+        }
+
+        .pesquisar:hover{
+            background-color: transparent;
+            border: 1px solid black;
+        }
+
+        .voltar{
+            position: fixed;
+            top: 60px;
+            left: 0;
+            margin: 10px;
+            width: 100px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Alunos Tech4me</h1>
+    </header>
+    <main>
+        <a href="../index.html">
+            <button class="voltar">Voltar</button>
+        </a>
+
+        <button id="button-aluno">Consultar por aluno</button>
+        <div class="aba-alunos hidden" id="aba-aluno">
+            <div class="lista-alunos">
+                <button class="fechar" id="fechar-aluno">X</button>
+                <div class="input">
+                    <input type="text" placeholder="Nome do aluno" id="inputNome">
+                    <button id="pesquisar-aluno-nome" class="pesquisar">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </button>
+                </div>
+                <div id="lista-aluno">
+
+                </div>
+            </div>
+        </div>
+
+        <button id="button-turma">Consultar por turma</button>
+        <div class="aba-alunos hidden" id="aba-turma">
+            <div class="lista-alunos">
+                <button class="fechar" id="fechar-turma">X</button>
+                <div class="input">
+                    <input type="text" placeholder="Nome da turma" id="inputTurma">
+                    <button id="pesquisar-aluno-turma" class="pesquisar">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </button>
+                </div>
+                <div id="lista-turma">
+
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="pesquisar.js"></script>
+</body>
+</html>
